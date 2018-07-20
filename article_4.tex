@@ -86,7 +86,7 @@ BCOR5mm, % Binding correction
 \section*{Abstract} 
 As the relevance of adequately assessing the state of the oceans and offshore installations grows, AUVs and ROVs are acquiring an increasingly important role as tools to remotely monitor, explore or operate in submarine locations otherwise hard to access.
 A key step on developing these vehicles is the simulation phase, due to the complexity involved in testing them in the real domain and the risk of losing them.
-However, creating a realistic and reliable simulator for underwater environments and tools turns out to be significantly challenging in comparison to other domains.
+However, creating a realistic and reliable simulator for underwater environments and vehicles turns out to be significantly challenging in comparison to other scenarios.
 Given the complex dynamics of the subsea environments and the kind of technology they use for interacting with their surroundings, the modeling and simulation of submarine robots is way behind their equivalent counterparts for ground and indoor mobile platforms.
 Thus, this tutorial aims at introducing the SMARC underwater simulator, an open-source tool based on ROS \cite{Quigley09}, Gazebo \cite{koenig2004design} and the UUV simulator \cite{Manhaes_2016}, being used and developed within the \href{https://smarc.se/}{SMARC center} to help fill the gap. 
 The attendee will gain basic skills with this new tool to replicate subsea conditions and test vehicles missions underwater.
@@ -127,14 +127,14 @@ The attendee will gain basic skills with this new tool to replicate subsea condi
 \section{Brief description and objectives}
 \label{sec:description}
 The goal of this hands-on tutorial is to introduce the users to the basics of the simulation of underwater mobile platforms through a practical demo with the SMARC simulator.
-A mission in which a LoLo AUV performs an autonomous inspection of a pipeline sitting on the seabed is proposed to the attendees, who are then walked through the design and implementation of the scenario and robotic system required.
+A mission in which a LoLo AUV performs an autonomous inspection of a pipeline sitting on the seabed is proposed to the attendees, who are then walked through the design and implementation of the scenario and the robotic system.
 
 As a first step, some generic software tools commonly used in robotics will be presented at an introductory level, focusing on ROS, Gazebo and RVIZ.
 Hereafter, the tutorial will show how to reproduce the subsea scenario in the simulator and how to tune the physics of the scene and the mobile platform as necessary.
 After, a basic navigation system for the AUV will be built out of already existing core components and sensors so that the platform can carry out the proposed mission.
-Finally, the demo will be run to show the possible ways to visualize data from the sensors and the system and log it for offline analysis.
+Finally, the demo will be run while showcasing some possible ways to visualize data from the sensors and the system and log it for offline analysis.
 
-The ultimate objective is to provide engineers and researchers in underwater mobile robots with a new tool to replicate subsea conditions and vehicles behaviors in order to test their performance in a mission. 
+The ultimate objective is to provide engineers and researchers in underwater mobile robots with a new tool to replicate vehicles behaviors in submarine conditions in order to test their performance in a mission. 
 \\
 % For more details on the outline of the tutorial, see attached documentation.
 
@@ -145,12 +145,12 @@ The ultimate objective is to provide engineers and researchers in underwater mob
 \section{Target audience}
 \label{sec:audience}
 % A more comprehensive understanding of the underlying technology and use of AUVs/ROVs is becoming more relevant to those working with offshore infrastructures or in oceanographic research, as these devices become more reliable and cost-effective. 
-This tutorial is aimed at an audience of engineers and scientists with a background in robot platforms, sensing instrumentation or working with subaquatic vehicles, both unmanned and remotely controlled.
+This tutorial is aimed at an audience of engineers and scientists with a background in robot platforms and sensing instrumentation or working with sub-aquatic vehicles, both unmanned and remotely controlled.
 Other people in contact with this technology with an interest in broadening their understanding of how the core components of these systems work during a mission are also welcome.
 \\
 Given the practical approach of the session, some prerequisites are assumed for the attendee to carry out the practicals.
 User-level skills with Linux-based systems and a basic knowledge of mobile platforms and/or instrumentation is expected.
-Previous programming skills or experience with ROS or Gazebo is not required but a plus.
+Previous programming skills or experience with ROS or Gazebo are not required but a plus.
 
 %----------------------------------------------------------------------------------------
 %	Format
@@ -160,7 +160,7 @@ Previous programming skills or experience with ROS or Gazebo is not required but
 \label{sec:format}
 Each participant or group of participants should bring a PC or be provided one for this tutorial.
 A 10 GB virtual machine with an Ubuntu installation containing all the necessary software tools to carry out the practicals will be made available prior the session or installed in the provided computers. 
-The audience is expected to have installed the VM before the beginning of the tutorial.
+The guests are expected to have installed the VM before the beginning of the tutorial.
 \\
 Two presenters will interactively walk the attendees through the tutorial. 
 The main one will be carrying out the demo setup on his own PC connected to a projector, with a combination of speaking and live coding, while the other one offers assistance as requested. 

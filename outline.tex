@@ -67,12 +67,12 @@ BCOR5mm, % Binding correction
 
 \section{Detailed description}
 \label{sec:draft}
-The tutorial will be divided in three sections, covering three and a half hours with a 30 minutes break, as specified. 
+This tutorial will be divided in three sections, covering three and a half hours with a 30 minutes break, as specified. 
 
 \subsection{\textbf{Setting up a basic scenario (1 hour)}}
 At the beginning of this section, a mission demo for an AUV will be detailed to the audience, together with the steps to implement it in the simulator.
-The mission will consist of an AUV which has to autonomously hover over a pipeline while creating a batymetry map and recording the state of the pipe with a camera to further assess its state.
-After, the Gazebo simulator and its ROS interface will be presented while setting up the scenario and the most basic AUV system.
+The mission will consist of an AUV which has to autonomously hover over a pipeline while creating a batymetry map of the surroundings and recording with a camera to assess its state after.
+Following this, the Gazebo simulator and its ROS interface will be presented while setting up the scenario and the most basic AUV system.
 
 \begin{figure}[h]
     \centering
@@ -92,8 +92,8 @@ A capture of the expected output of the listed tasks can be seen in \ref{fig:lol
 
 \subsection{\textbf{Building the AUV system (1 hour)}}
 In this section, the attendees will be introduced to the navigation architecture of an AUV through a hands-on setup of its basic components, already existing in the simulator.
-In \ref{fig:auv_system} a high-level overview of the system to have implemented at the end of the section can be seen.
-The sensors, actuators and software components will be explained, and instances of them will be plugged in the system so that a LoLo AUV can perform the autonomous inspection mission over the pipeline.
+In \ref{fig:auv_system} a high-level overview of the system to have implemented by the end of the section can be seen.
+The sensors, actuators and software components will be explained, and instances of them will be plugged in the system so that the LoLo AUV can perform the autonomous inspection mission over the pipeline.
 
 \begin{figure}[h]
     \centering
@@ -105,9 +105,8 @@ The sensors, actuators and software components will be explained, and instances 
 
 \subsection{\textbf{Running the demo, visualizing and logging data (1 hour)}}
 The final hour will be devoted to launching the previous AUV system in the scenario created and running the final demo.
-While doing so, the audience will be introduced to the data visualization and logging tools as means to evaluate the current state of the mission and its final success after completion.
-\\
-Attendees will put together the output from previous sections and get familiar with the launch system in ROS, as well as data recording, visualization and diagnosing tools such as RVIZ or rqt.
+While doing so, the audience will be try the basic capabilities of the user interface during an AUV mission in the simulator in order to evaluate the current state of the mission and its final success after completion.
+Attendees will put together the output from previous sections and get familiar with standard data recording, visualization and diagnosing tools in ROS such as RVIZ or rqt.
 
 \begin{figure}[h]
     \centering
@@ -119,14 +118,15 @@ Attendees will put together the output from previous sections and get familiar w
 %----------------------------------------------------------------------------------------
 \section{Description of the practical demo and exercises}
 \label{sec:demo}
-This tutorial is meant to be mostly a hands-on session in which the audience will follow the instructions from the main presenter to implement the proposed demo.
+This tutorial is meant to be a mainly hands-on session in which the audience will follow the instructions from the main presenter to implement the proposed demo.
 The different steps in each session described above are designed to be very modular, allowing each of them to be checked separately and put together as a final step.
-In order to respect the timing of the session, the solution will be provided at the end of each step, so that every attendee can keep up and have a running system by the end of the section.
+In order to respect the timing of the session, the solutions will be provided at the end of each step, so that every attendee can keep up and have a running system by the end of the sections.
+\\
 
 \subsection{\textbf{Presentation}}
-The main presenter will carry out each instruction required to set up the demo in front of the audience, expecting the attendants to follow up and execute the same steps.
+The main presenter will carry out each step required to set up the demo in front of the audience, expecting the attendants to follow up and execute the same instructions.
 At the same time, some basic concepts on the subject of the section will be explained.
-The second presenter will meanwhile try to answer individual queries and help execute the instructions to those who might need it.
+The second presenter will meanwhile try to answer individual queries and help execute the tasks to those who might need it.
 
 As an example, while presenting the control module in the AUV system in \ref{fig:auv_system}, the generalities of this components in a mobile platform will be briefly discussed, different controller instances will be mentioned and finally, a controller will be added to the system.
 
@@ -145,7 +145,7 @@ Only high-level, XML-like language will be used to work with the AUV launch syst
 
 \subsection{\textbf{Feedback and support}}
 The attendants will be given colored sticky notes to convey feedback on the development of the session. 
-One color will indicate the participant has a question or needs assistance, so that they can stick it on a visible place and let the presenters know they need support.
+One color will indicate the participant has a question or needs assistance, so that they can stick it on a visible place on their workstation and let the presenters know they need support.
 The other color will show success implementing an exercise.
 With this method, the presenters can quickly adjust the pace of the session to the audience.
 
