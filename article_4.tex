@@ -33,7 +33,7 @@ BCOR5mm, % Binding correction
 \usepackage{geometry}
  \geometry{
  left=30mm,
- top=20mm,
+ top=10mm,
  }
 
 \hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
@@ -42,12 +42,13 @@ BCOR5mm, % Binding correction
 %	TITLE AND AUTHOR(S)
 %----------------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{Yet another simulator for underwater vehicles}} % The article title
+\title{\normalfont{Setting-up and Using the UUV 
+Simulator for system integration tests in realistic AUV scenarios}} % The article title
 
 %\subtitle{Subtitle} % Uncomment to display a subtitle
 
-\author{Nils Bore, Ignacio Torroba \& John Folkesson\\
-\{nbore, torroba, johnf\}@kth.se} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+\author{Ignacio Torroba, Nils Bore \& John Folkesson\\
+\{torroba, nbore, johnf\}@kth.se} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
 
 \date{} % An optional date to appear under the author(s)
 
@@ -86,10 +87,11 @@ BCOR5mm, % Binding correction
 \section*{Abstract} 
 As the relevance of adequately assessing the state of the oceans and offshore installations grows, AUVs and ROVs are acquiring an increasingly important role as tools to remotely monitor, explore or operate in submarine locations otherwise hard to access.
 A key step on developing these vehicles is the simulation phase, due to the complexity involved in testing them in the real domain and the risk of losing them.
-However, creating a realistic and reliable simulator for underwater environments and vehicles turns out to be significantly challenging in comparison to other scenarios.
-Given the complex dynamics of the subsea environments and the kind of technology they use for interacting with their surroundings, the modeling and simulation of submarine robots is way behind their equivalent counterparts for ground and indoor mobile platforms.
-Thus, this tutorial aims at introducing the SMARC underwater simulator, an open-source tool based on ROS \cite{Quigley09}, Gazebo \cite{koenig2004design} and the UUV simulator \cite{Manhaes_2016}, being used and developed within the \href{https://smarc.se/}{SMARC center} to help fill the gap. 
-The attendee will gain basic skills with this new tool to replicate subsea conditions and test vehicles missions underwater.
+% However, creating a realistic and reliable simulator for underwater environments and vehicles turns out to be significantly challenging in comparison to other scenarios.
+Given the changing dynamics of the subsea environments and the kind of technology they use for interacting with their surroundings, the modeling and simulation of submarine robots is way behind their equivalent counterparts for ground and indoor mobile platforms.
+Thus, in this tutorial we aim at introducing the UUV underwater simulator \cite{Manhaes_2016}, an open-source tool based on ROS \cite{Quigley09} and Gazebo \cite{koenig2004design} being used and extended within the \href{https://smarc.se/}{SMARC center} to help fill the gap. 
+The attendees will gain basic skills with this tool on replicating subsea conditions and testing vehicles missions underwater.
+They will benefit from our experience choosing and adapting a simulator to the requirements of research in underwater platforms and get a glimpse on the potential of this tool for their own needs.
 
 % This section will not appear in the table of contents due to the star (\section*)
 
@@ -110,6 +112,7 @@ The attendee will gain basic skills with this new tool to replicate subsea condi
 
 \let\thefootnote\relax\footnotetext{* \textit{Robotics, Perception and Learning Lab, KTH, Stockholm}}
 
+% http://www.oceansconference.org/past-conferences/
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
