@@ -1,0 +1,71 @@
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+% headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\usepackage{geometry}
+ \geometry{
+ left=30mm,
+ top=10mm,
+ }
+% \usepackage{hyperref}
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont{Tutorial instructors}} % The 
+\date{} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\section{Instructor 1 (main): Nils Bore} % (fold)
+\label{sec:presenter_1_nils_bore}
+
+Nils attained the Master of Science in Engineering Mathematics from Lund University in 2012. He then went on to do his PhD in Robotics at KTH RPL, with most of his work concentrated on long-term robotic mapping within the STRANDS research project.
+Nils attained his PhD degree in Robotics and Computer Vision in 2018 and is now working as a PostDoc on underwater mapping within the SMARC AUV project at RPL.
+His research interests include probabilistic modeling of temporal as well as spatial processes in the domain of robot and AUV mapping. He is also interested in the integration and long-term robust operation of autonomous agents, with an emphasis on robust software design.
+
+\subsection{Contact information}
+Tel: +46703214971
+\\
+Email: nbore@kth.se
+\\
+\href{https://www.kth.se/profile/nbore}{Personal website}
+
+\section{Instructor 2: Ignacio Torroba} % (fold)
+\label{sec:presenter_2_ignacio_torroba_balmori}
+
+Ignacio has recently started his PhD in autonomous underwater navigation at the Robotics, Perception and Learning lab at KTH university, under the supervision of John Folkesson.
+He obtained his master in Robot Systems at the University of Southern Denmark and worked for Hitachi for a year in the Green Mobility Research Department, in Hitachi city, before settling down in Sweden.
+His areas of interest are underwater navigation and SLAM, with special interest in the specific challenges posed by marine environments and the limited sensor capabilities of AUVs.
+
+\subsection{Contact information}
+Tel: +46724520315
+\\
+Email: torroba@kth.se
+\\
+\href{https://www.kth.se/profile/torroba}{Personal website}
+
+\end{document}

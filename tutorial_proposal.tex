@@ -1,0 +1,189 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (1/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+% headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\usepackage{geometry}
+ \geometry{
+ left=30mm,
+ top=10mm,
+ }
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont{Setting-up and Using the UUV 
+Simulator for system integration tests in realistic AUV scenarios}} % The article title
+
+%\subtitle{Subtitle} % Uncomment to display a subtitle
+
+\author{Ignacio Torroba, Nils Bore \& John Folkesson\\
+\{torroba, nbore, johnf\}@kth.se} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+% \tableofcontents % Print the table of contents
+
+% \listoffigures % Print the list of figures
+
+% \listoftables % Print the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Abstract} 
+As the relevance of adequately assessing the state of the oceans and offshore installations grows, AUVs and ROVs are acquiring an increasingly important role as tools to remotely monitor, explore or operate in submarine locations otherwise hard to access.
+A key step on developing these vehicles is the simulation phase, due to the complexity involved in testing them in the real domain and the risk of losing them.
+% However, creating a realistic and reliable simulator for underwater environments and vehicles turns out to be significantly challenging in comparison to other scenarios.
+Given the changing dynamics of the subsea environments and the kind of technology they use for interacting with their surroundings, the modeling and simulation of submarine robots is way behind their equivalent counterparts for ground and indoor mobile platforms.
+Thus, in this tutorial we aim at introducing the UUV underwater simulator \cite{Manhaes_2016}, an open-source tool based on ROS \cite{Quigley09} and Gazebo \cite{koenig2004design} being used and extended within the \href{https://smarc.se/}{SMARC center} to help fill the gap. 
+The attendees will gain basic skills with this tool on replicating subsea conditions and testing vehicles missions underwater.
+They will benefit from our experience choosing and adapting a simulator to the requirements of research in underwater platforms and get a glimpse on the potential of this tool for their own needs.
+
+% This section will not appear in the table of contents due to the star (\section*)
+
+\section{Abbreviations}
+\label{sec:abbreviations}
+\begin{description}
+\item [AUV] Autonomous underwater vehicle
+\item [FLS] Forward looking sonar
+\item [MBES] Multibeam echo sounder
+\item [ROS] Robot Operating System
+\item [ROV] Remotely operated vehicle
+\end{description}
+
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+
+\let\thefootnote\relax\footnotetext{* \textit{Robotics, Perception and Learning Lab, KTH, Stockholm}}
+
+% http://www.oceansconference.org/past-conferences/
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Overview
+%----------------------------------------------------------------------------------------
+
+% \section{Overview}
+% \label{sec:overview}
+
+ 
+%----------------------------------------------------------------------------------------
+%	Contents
+%----------------------------------------------------------------------------------------
+
+\section{Brief description and objectives}
+\label{sec:description}
+The goal of this hands-on tutorial is to introduce the users to the basics of the simulation of underwater mobile platforms through a practical demo with the SMARC simulator.
+A mission in which a SMARC AUV performs an autonomous inspection of a pipeline sitting on the seabed is proposed to the attendees, who are then walked through the design and implementation of the scenario and the robotic system.
+
+As a first step, some generic software tools commonly used in robotics will be presented at an introductory level, focusing on ROS, Gazebo and RVIZ.
+Hereafter, the tutorial will show how to reproduce the subsea scenario in the simulator and how to tune the physics of the scene and the mobile platform as necessary.
+After, a basic navigation system for the AUV will be built out of already existing core components and sensors so that the platform can carry out the proposed mission.
+Finally, the demo will be run while showcasing some possible ways to visualize data from the sensors and the system and log it for offline analysis.
+
+The ultimate objective is to provide engineers and researchers in underwater mobile robots with a new tool to replicate vehicles behaviors in submarine conditions in order to test their performance in a mission. 
+\\
+% For more details on the outline of the tutorial, see attached documentation.
+
+%----------------------------------------------------------------------------------------
+%	Target audience
+%----------------------------------------------------------------------------------------
+
+\section{Target audience}
+\label{sec:audience}
+% A more comprehensive understanding of the underlying technology and use of AUVs/ROVs is becoming more relevant to those working with offshore infrastructures or in oceanographic research, as these devices become more reliable and cost-effective. 
+This tutorial is aimed at an audience of engineers and scientists with a background in robot platforms and sensing instrumentation or working with sub-aquatic vehicles, both unmanned and remotely controlled.
+Other researchers and engineers in contact with this technology with an interest in broadening their understanding of how the core components of these systems work during a mission are also welcome.
+\\
+Given the practical approach of the session, some prerequisites are assumed for the attendee to carry out the practicals.
+User-level skills with Linux-based systems and a basic knowledge of mobile platforms and/or instrumentation is expected.
+Previous programming skills or experience with ROS or Gazebo are not required but a plus.
+
+%----------------------------------------------------------------------------------------
+%	Format
+%----------------------------------------------------------------------------------------
+
+\section{Format of the session}
+\label{sec:format}
+Each participant or group of participants should bring a PC or be provided one for this tutorial.
+A 10 GB virtual machine with an Ubuntu installation containing all the necessary software tools to carry out the practicals will be made available prior the session or installed in the provided computers. 
+The guests are expected to have installed the VM before the beginning of the tutorial.
+\\
+Two presenters will interactively walk the attendees through the tutorial. 
+The main one will be carrying out the demo setup on his own PC connected to a projector, with a combination of speaking and live coding, while the other one offers assistance as requested. 
+The audience is then expected to follow and execute the same instructions as the main presenter.
+\\ 
+The limit in the size of the audience is expected to depend on the number of available PCs and the size of the classroom/auditory.
+However, in order to be able to assist the attendees with two presenters, a reasonable number of participants would be around 20.
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+% \bibliographystyle{unsrt}
+% \bibliography{sample.bib} % The file containing the bibliography
+
+\bibliography{article_4.bib}
+\bibliographystyle{ieeetr}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
